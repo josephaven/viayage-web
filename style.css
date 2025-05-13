@@ -21,6 +21,7 @@ body {
   padding: 0 20px;
 }
 
+/* HEADER */
 header {
   position: sticky;
   top: 0;
@@ -110,7 +111,7 @@ nav a:hover {
 }
 
 .about-icon-card {
-  flex: 0 0 180px; /* ancho fijo */
+  flex: 0 0 180px;
   background: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -120,14 +121,13 @@ nav a:hover {
   align-items: center;
 }
 
-
 .about-icon-card img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
-/* TARJETAS (MISIÓN, VISIÓN...) */
+/* TARJETAS MISIÓN, VISIÓN, VALORES */
 .cards {
   display: flex;
   gap: 20px;
@@ -295,4 +295,64 @@ nav a:hover {
 
 .social-links a:hover img {
   filter: brightness(10) invert(1);
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .hero-text-only h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-text-only {
+    padding: 0 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-icon-card {
+    width: 80%;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .card-icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-icon h3 {
+    font-size: 1.1rem;
+  }
 }
