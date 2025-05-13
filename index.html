@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIAYAGE</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="logo.png" alt="Logo Viayage" />
+        <span>Viayage</span>
+      </div>
+      <nav>
+        <a href="#about">Acerca</a>
+        <a href="#mision">Propósito</a>
+        <a href="#creacion">Creación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO CON IMAGEN DE FONDO -->
+  <section class="hero">
+    <div class="container hero-text-only">
+      <h1>Viaja más,<br/>preocúpate menos</h1>
+    </div>
+  </section>
+
+  <!-- ACERCA -->
+  <section id="about" class="section">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>Sobre Viayage</h2>
+        <p>
+          Viayage nació con la misión de ayudarte a descubrir el mundo de forma personalizada, intuitiva y accesible, como una app pensada para cada tipo de viajero.
+        </p>
+      </div>
+      <div class="about-icon-card">
+        <img src="logo.png" alt="Ícono de ubicación" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MISION, VISION, VALORES -->
+  <section id="mision" class="section alt">
+    <div class="container cards">
+      <div class="card card-icon">
+        <img src="mision.svg" alt="Icono de Misión" />
+        <h3>Misión</h3>
+        <p>Crear viajes únicos con una aplicación de IA que guía, informa y recomienda en tiempo real según tus gustos.</p>
+      </div>
+      <div class="card card-icon">
+        <img src="vision.svg" alt="Icono de Visión" />
+        <h3>Visión</h3>
+        <p>Ser en 5 años la guía turística inteligente líder, revolucionando los viajes con IA y personalización para convertirnos en el acompañante imprescindible del viajero.</p>
+      </div>
+      <div class="card card-icon">
+        <img src="valores.svg" alt="Icono de Valores" />
+        <h3>Valores</h3>
+        <p>Accesibilidad, Innovación, Inclusión, Empatía.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREACIÓN CON CARRUSEL -->
+  <section id="creacion" class="section">
+    <div class="container creacion-grid">
+      <div class="timeline-v2">
+        <h2>¿Cómo nació la app?</h2>
+
+        <div class="timeline-item">
+          <div class="icon"><img src="foco.svg" alt="Idea" /></div>
+          <div class="text">
+            <h4>Idea inicial</h4>
+            <p>Conceptualizamos una app para rutas personalizadas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="icon"><img src="computadora.svg" alt="Prototipo" /></div>
+          <div class="text">
+            <h4>Prototipo</h4>
+            <p>Creamos un primer diseño y realizamos pruebas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="icon"><img src="grupo.svg" alt="Usuarios" /></div>
+          <div class="text">
+            <h4>Usuarios iniciales</h4>
+            <p>Invitamos a los primeros usuarios a probarla.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="icon"><img src="rocket.svg" alt="Lanzamiento" /></div>
+          <div class="text">
+            <h4>Lanzamiento</h4>
+            <p>Lanzamos oficialmente en tiendas de apps.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARRUSEL DE IMÁGENES -->
+      <div class="carousel-box">
+        <div class="carousel">
+          <img src="pro1.jpg" alt="Proceso 1" />
+          <img src="pro2.PNG" alt="Proceso 2" />
+          <img src="pro3.jpg" alt="Proceso 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section alt">
+    <div class="container contact-icons">
+      <h2>Contacto</h2>
+      <p>Puedes escribirnos o seguirnos en nuestras redes:</p>
+      <div class="social-links">
+        <a href="mailto:viayageapp@gmail.com" target="_blank">
+          <img src="mail.png" alt="Correo" />
+        </a>
+        <a href="https://www.instagram.com/viayage_mx?igsh=MThxdnpobWYzajFvOA==" target="_blank">
+          <img src="insta.png" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/viayageapp" target="_blank">
+          <img src="face.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPT PARA CARRUSEL -->
+  <script>
+    const carouselImgs = document.querySelectorAll('.carousel img');
+    let imgIndex = 0;
+
+    function nextImage() {
+      carouselImgs.forEach(img => img.classList.remove('active'));
+      imgIndex = (imgIndex + 1) % carouselImgs.length;
+      carouselImgs[imgIndex].classList.add('active');
+    }
+
+    if (carouselImgs.length > 0) {
+      carouselImgs[0].classList.add('active');
+      setInterval(nextImage, 3000);
+    }
+  </script>
+
+</body>
+</html>

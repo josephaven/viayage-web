@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #0a0a0a;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+nav a {
+  margin: 0 12px;
+  color: #27334B;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  background-image: url('carretera.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 120px 20px;
+}
+
+.hero-text-only {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-text-only h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* SECCIONES */
+.section {
+  padding: 60px 20px;
+}
+
+.section.alt {
+  background: #f7f9fb;
+}
+
+/* ACERCA */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-icon-card {
+  flex: 0 0 180px; /* ancho fijo */
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about-icon-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* TARJETAS (MISIÓN, VISIÓN...) */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  text-align: center;
+  padding: 30px;
+}
+
+.card-icon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+}
+
+.card-icon h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #2e6ef7;
+}
+
+.card-icon p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* TIMELINE + CARRUSEL */
+.creacion-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.timeline-v2 {
+  margin-top: 40px;
+  border-left: 3px solid #2e6ef7;
+  padding-left: 30px;
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item .icon {
+  background: #2e6ef7;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -56px;
+  top: 0;
+}
+
+.timeline-item .icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.timeline-item .text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timeline-item .text p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* CARRUSEL */
+.carousel-box {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  display: none;
+  animation: fade 0.8s ease-in-out;
+  border-radius: 12px;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* CONTACTO */
+.contact-icons {
+  text-align: center;
+}
+
+.contact-icons p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #f0f4ff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #2e6ef7;
+}
+
+.social-links img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) invert(0.5);
+}
+
+.social-links a:hover img {
+  filter: brightness(10) invert(1);
+}
