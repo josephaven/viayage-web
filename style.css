@@ -64,6 +64,21 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* DESCARGAR botón en navbar */
+.nav-download {
+  background-color: #2e6ef7;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-download:hover {
+  background-color: #1d4ed8;
+}
+
 /* HERO */
 .hero {
   background-image: url('carretera.jpg');
@@ -297,7 +312,28 @@ nav a:hover {
   filter: brightness(10) invert(1);
 }
 
-/* MEDIA QUERIES RESPONSIVE */
+/* BOTÓN DE DESCARGA */
+.download-apk {
+  margin-top: 30px;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: #2e6ef7;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #1d4ed8;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -355,25 +391,4 @@ nav a:hover {
   .card-icon h3 {
     font-size: 1.1rem;
   }
-
-  .download-apk {
-  margin-top: 30px;
-}
-
-.btn-download {
-  display: inline-block;
-  background-color: #2e6ef7;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-download:hover {
-  background-color: #1d4ed8;
-}
-
 }
