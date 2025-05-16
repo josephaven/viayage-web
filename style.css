@@ -355,4 +355,25 @@ nav a:hover {
   .card-icon h3 {
     font-size: 1.1rem;
   }
+
+  .download-apk {
+  margin-top: 30px;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: #2e6ef7;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #1d4ed8;
+}
+
 }
